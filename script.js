@@ -29,8 +29,13 @@ export function aufgabe01(args) {
     // damit wir nicht so viele Klammern schreiben müssen.
     const currentElement = input[i]
 
-    // Hier wird das aktuelle Zeichen ans Ende der Resultat-Liste angehängt.
-    result.push(currentElement)
+    if (currentElement === "e") {
+      //do nothing
+    } else if (currentElement === "E") {
+      //auch E ignorieren
+    } else {
+      result.push(currentElement)
+    }
   }
 
   // Hier geben wir das Resultat zurück, und machen einen Text daraus.
@@ -38,3 +43,58 @@ export function aufgabe01(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe01]", aufgabe01)
+
+export function aufgabe02(args) {
+  const input = args
+  const result = [] //Resultatsliste
+
+  //Läuft Zeichen für Zeichen über den ganzen Text.
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const upperCase = currentElement.toUpperCase()
+    //Mache currentElement uppercase
+    result.push(upperCase)
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
+
+export function aufgabe03(args) {
+  const input = args
+  const result = []
+
+  let count = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      // zähle das e
+      count = count + 1
+    } else if (currentElement === "E") {
+      // zähle das E
+      count = count + 1
+    }
+  }
+  return count
+}
+
+linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
+
+export function aufgabe08(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === "e") {
+    } else if (currentElement === "E") {
+    } else {
+      result.push()
+    }
+  }
+  return result.join("")
+}
+
+linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
