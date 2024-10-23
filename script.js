@@ -52,10 +52,31 @@ export function aufgabe02(args) {
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     const upperCase = currentElement.toUpperCase()
-    //Hänge das aktuelle Zeichen doppelt an.
+    //Mache currentElement uppercase
     result.push(upperCase)
   }
   return result.join("")
 }
 
 linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
+
+export function aufgabe03(args) {
+  const input = args
+  const result = []
+
+  let count = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      // zähle das e
+      count = count + 1
+    } else if (currentElement === "E") {
+      // zähle das E
+      count = count + 1
+    }
+  }
+  return count
+}
+
+linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
