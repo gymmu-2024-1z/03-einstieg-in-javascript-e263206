@@ -89,9 +89,9 @@ export function aufgabe08(args) {
     const currentElement = input[i]
 
     if (currentElement === "e") {
-      result.push(3)
+      result.push(3) //ersetze e mit 3
     } else {
-      result.push(currentElement)
+      result.push(currentElement) //wenn Element nicht e soll einfach das nächste kommen
     }
   }
   return result.join("")
