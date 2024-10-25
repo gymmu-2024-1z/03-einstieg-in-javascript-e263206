@@ -63,6 +63,7 @@ linkupExerciseHandler("[data-click=aufgabe02]", aufgabe02)
 export function aufgabe03(args) {
   const input = args
   const result = []
+  //func and tab
 
   let count = 0
 
@@ -75,11 +76,12 @@ export function aufgabe03(args) {
       // zähle das E
       count = count + 1
     }
+    //for and tab
   }
   return count
 }
 
-linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03)
+linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03) //link und tab
 
 export function aufgabe08(args) {
   const input = args
