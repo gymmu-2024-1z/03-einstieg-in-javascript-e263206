@@ -100,3 +100,17 @@ export function aufgabe08(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe08]", aufgabe08)
+
+export function aufgabe09(args) {
+  const input = args
+
+  const len = input.length //Speichern der Länge in der Liste
+  if (len === 6) {
+    //Wenn Länge 6
+    return true
+  } else {
+    return false
+  }
+}
+
+linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
