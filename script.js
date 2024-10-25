@@ -89,9 +89,9 @@ export function aufgabe08(args) {
     const currentElement = input[i]
 
     if (currentElement === "e") {
-    } else if (currentElement === "E") {
+      result.push(3)
     } else {
-      result.push()
+      result.push(currentElement)
     }
   }
   return result.join("")
