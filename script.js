@@ -140,7 +140,7 @@ export function aufgabe13(args) {
   const input = args
   const result = []
 
-  let pos = -1 //wenn keins gefunden wird ist die pos -1
+  let pos = -1
   let foundE = false
 
   for (let i = 0; i < input.length; i++) {
@@ -155,3 +155,23 @@ export function aufgabe13(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
+
+export function aufgabe14(args) {
+  const input = args
+  const result = []
+
+  let pos = -1
+  let foundE = false
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      pos = i //jedes mal wenn e gefunden wird wird i überschrieben
+
+      foundE = true
+    }
+  }
+  return pos
+}
+
+linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
