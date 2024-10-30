@@ -114,3 +114,24 @@ export function aufgabe09(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe09]", aufgabe09)
+
+export function aufgabe12(args) {
+  const input = args
+  const result = []
+
+  let pos = -1 //wenn keins gefunden wird ist die pos -1
+  let foundE = false
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      if (foundE === false) {
+        pos = i
+      }
+      foundE = true
+    } //verhindert dass mehr als das erste e bestimmt wird
+  }
+  return pos
+}
+
+linkupExerciseHandler("[data-click=aufgabe12]", aufgabe12)
