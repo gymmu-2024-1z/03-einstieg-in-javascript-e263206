@@ -159,18 +159,23 @@ linkupExerciseHandler("[data-click=aufgabe13]", aufgabe13)
 export function aufgabe14(args) {
   const input = args
   const result = []
-
+  // einfach nur text....
   let pos = -1
-  let foundE = false
+  let countE = 0
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
+    //Wenn du ein e findest, zähle es
     if (currentElement === "e") {
-      pos = i //jedes mal wenn e gefunden wird wird i überschrieben
-
-      foundE = true
+      //Zähle das e
+      countE = countE + 1
+      // nur genau dann wenn countE 3 ist, sollst du die position speichern
+      if (countE === 3) {
+        pos = i
+      }
     }
   }
+
   return pos
 }
 
