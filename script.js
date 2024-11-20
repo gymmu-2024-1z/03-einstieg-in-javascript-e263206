@@ -180,3 +180,26 @@ export function aufgabe14(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
+
+export function aufgabe20(args) {
+  const input = args
+  const result = []
+
+  let pos = -1
+  let countE = 0
+
+  for (let i = 0; i < input.length; i++) {
+    //prüfe ob nach jedem . ein Leerzeichen kommt
+    const currentElement = input[i]
+    if (currentElement === ".") {
+      //prüfe ob ein Leerzeichen kommt
+      if (input[i + 1] === " ") {
+        // okay, mache weiter
+      } else {
+        return false
+      }
+    }
+  }
+  return true
+}
+linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
