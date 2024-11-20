@@ -83,6 +83,25 @@ export function aufgabe03(args) {
 
 linkupExerciseHandler("[data-click=aufgabe03]", aufgabe03) //link und tab
 
+export function aufgabe04(args) {
+  const input = args
+  const result = []
+  //func and tab
+
+  let count = 0
+
+  for (let i = 0; i < input.length; i++) {
+    //zähle alle Wörter in einem Text
+    const currentElement = input[i]
+    if (currentElement === " ") {
+      count = count + 1
+    }
+  }
+  return count + 1
+}
+
+linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04) //link und tab
+
 export function aufgabe08(args) {
   const input = args
   const result = []
