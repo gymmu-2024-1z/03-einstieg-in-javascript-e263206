@@ -244,3 +244,23 @@ export function aufgabe20(args) {
   return true
 }
 linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
+
+export function aufgabe21(args) {
+  const input = "abc123"
+  const liste = input.split("")
+
+  for (let i = 0; i < liste.length - 1; i++) {
+    const currentElement = liste[i]
+    const nextElement = liste[i + 1]
+
+    if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
+      //vertausche die Elemente
+      liste[i] = nextElement
+      liste[i + 1] = currentElement
+
+      i = -1
+    }
+    console.log(liste.join(""))
+  }
+}
+linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
