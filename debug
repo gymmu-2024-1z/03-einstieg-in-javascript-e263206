@@ -1,4 +1,4 @@
-const input = "abc123"
+const input = "oiwanalaifansnn>1SHD372521gbga>cqung"
 const liste = input.split("")
 
 for (let i = 0; i < liste.length - 1; i++) {
