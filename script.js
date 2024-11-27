@@ -245,7 +245,7 @@ export function aufgabe20(args) {
 }
 linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
 
-export function aufgabe21(args) {
+export function bubbleSort(args) {
   const input = "oiwanalaifansnn>1SHD372521gbga>cqung"
   const liste = input.split("")
 
@@ -264,4 +264,17 @@ export function aufgabe21(args) {
   }
   return liste.join("")
 }
+
+export function aufgabe21(args) {
+  const input = args
+  const result = []
+
+  for (let i = input.length - 1; i >= 0; i--) {
+    const currentElement = input[i]
+    result.push(currentElement)
+  }
+
+  return result.join("")
+}
+
 linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
