@@ -94,10 +94,10 @@ export function aufgabe04(args) {
     //zähle alle Wörter in einem Text
     const currentElement = input[i]
     if (currentElement === " ") {
-      count = count + 1
+      count = count + 1 //anstatt Wörter zählen wir hier die Leerzeichen nach einem Wort. Immer wenn ein Leerzeichen kommt wird count +1 erhöht.
     }
   }
-  return count + 1
+  return count + 1 //am Ende wird count +1 erhöht, damit auh das letzte Wort das kein Leerzeichen nach sich hat gezählt wird.
 }
 
 linkupExerciseHandler("[data-click=aufgabe04]", aufgabe04)
