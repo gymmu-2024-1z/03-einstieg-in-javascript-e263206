@@ -130,7 +130,7 @@ export function aufgabe08(args) {
   const result = []
 
   for (let i = 0; i < input.length; i++) {
-    const currentElement = input[i]
+    const currentElement = input[i] //speichert das aktuelle Zeichen
 
     if (currentElement === "e") {
       result.push(3) //ersetze e mit 3
@@ -162,16 +162,16 @@ export function aufgabe12(args) {
   const result = []
 
   let pos = -1 //wenn keins gefunden wird ist die pos -1
-  let foundE = false
+  let foundE = false //foundE ist falsch, bis das erste E gefunden wird
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
     if (currentElement === "e") {
       if (foundE === false) {
-        pos = i
+        pos = i //wenn e gefunden wird speichere position
       }
       foundE = true
-    } //verhindert dass mehr als das erste e bestimmt wird
+    } //verhindert dass mehr als das erste e bestimmt wird; man kann nur wenn man e noch nicht gefunden hat eine position speichern
   }
   return pos
 }
