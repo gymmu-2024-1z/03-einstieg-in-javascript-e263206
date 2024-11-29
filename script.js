@@ -106,20 +106,21 @@ export function aufgabe05(args) {
   const input = args
   const result = []
 
-  let hasUpperCaseLetter = false
+  let hasUpperCaseLetter = false //lasse hasUpperCaseLetter = false sein bis ein Grossbuchstabe gefunden wird
 
   for (let i = 0; i < input.length; i++) {
     const currentElement = input[i]
-    const UpperCaseLetter = currentElement.toUpperCase()
+    const UpperCaseLetter = currentElement.toUpperCase() //wenn Großbuchstabe gefunden wird, UpperCaseLetter = Großbuchstabe
 
     const LowerCaseLetter = UpperCaseLetter.toLowerCase()
     if (LowerCaseLetter === UpperCaseLetter) {
+      //wenn ein Kleinbuchstabe gefunden wird
       // tu nichts
     } else if (currentElement === UpperCaseLetter) {
-      hasUpperCaseLetter = true
+      hasUpperCaseLetter = true //wenn ein Großbuchstabe gefunden wird wird hasUpperCaseLetter = true, also bekommt man den Output true zurück
     }
   }
-  return hasUpperCaseLetter
+  return hasUpperCaseLetter //gib true oder false zurück
 }
 
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
