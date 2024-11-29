@@ -125,6 +125,29 @@ export function aufgabe05(args) {
 
 linkupExerciseHandler("[data-click=aufgabe05]", aufgabe05)
 
+export function aufgabe06(args) {
+  const text = args
+  const list = text
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = list[i]
+    const ascii = currentElement.charCodeAt(0)
+    //überprüfe mit ACSII Werten ob das Zeichen ein Sonderzeichen ist
+    if (ascii >= 48 && ascii <= 57) {
+      // wenn ja, ignoriere das Zeichen
+    } else if (ascii >= 65 && ascii <= 90) {
+      // wenn ja, ignoriere das Zeichen
+    } else if (ascii >= 97 && ascii <= 122) {
+      // wenn ja, ignoriere das Zeichen
+    } else {
+      return true
+    }
+  }
+  return false
+}
+
+linkupExerciseHandler("[data-click=aufgabe06]", aufgabe06)
+
 export function aufgabe08(args) {
   const input = args
   const result = []
