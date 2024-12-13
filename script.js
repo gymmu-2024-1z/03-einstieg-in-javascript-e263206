@@ -277,7 +277,22 @@ linkupExerciseHandler("[data-click=aufgabe14]", aufgabe14)
 
 export function aufgabe17(args) {
   const input = args
-  const result = []
+  const totallist = [] //Wenn ein Leerzeichen finden, wird alles bisher hier gespeichert
+  const currentlist = [] //geht durch Buchstaben, wird nach jedem Leerzeichen gelöscht
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    if (currentElement === " ") {
+      totallist.push(currentlist.join("")) //currentlist wird an totallist angehängt
+      currentlist.lenght = 0
+    } else {
+      currentlist.push(currentElement)
+    }
+  }
+  totallist.push(currentlist.join(""))
+
+  return totallist
 }
 
 linkupExerciseHandler("[data-click=aufgabe17]", aufgabe17)
