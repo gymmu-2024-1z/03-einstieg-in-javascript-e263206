@@ -408,4 +408,4 @@ export function selectionSort(args) {
   return input
 }
 
-linkupExerciseHandler('[data-click="selectionSort"]', selectionSort)
+linkupExerciseHandler('[data-click="selectionSort"]', countingSort)
