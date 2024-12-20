@@ -361,3 +361,28 @@ export function aufgabe21(args) {
 }
 
 linkupExerciseHandler("[data-click=aufgabe21]", aufgabe21)
+
+export function countingSort(args) {
+  const input = args
+  const lookup = new Array(128).fill(0)
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+    lookup[ascii] = lookup[ascii] + 1
+  }
+
+  const result = []
+
+  for (let i = 0; i < lookup.length; i++) {
+    const value = lookup[i]
+    for (let j = 0; j < value; j++) {
+      const character = String.fromCharCode(i)
+      result.push(character)
+    }
+  }
+
+  return result.join("")
+}
+
+linkupExerciseHandler('[data-click="countingSort"]', "countingSort")
