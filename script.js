@@ -433,5 +433,22 @@ export function aufgabe29(args) {
 
 linkupExerciseHandler("[data-click=aufgabe29]", aufgabe29)
 
-export function aufgabe30(args) {}
+export function aufgabe30(args) {
+  //Eine Funktion, die mithhilfe von ASCII alle Buchstaben alphabetisch ordnet, aber Sonderzeichen ausschliesst
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+
+    if ((ascii >= 65 && ascii <= 90) || (ascii >= 97 && ascii <= 122)) {
+      result.push(currentElement)
+    }
+  }
+
+  result.sort((a, b) => a.charCodeAt(0) - b.charCodeAt(0)) //sortiere die Buchstaben alphabetisch
+  return result.join("")
+}
+
 linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
