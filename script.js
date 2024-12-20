@@ -411,22 +411,27 @@ export function selectionSort(args) {
 linkupExerciseHandler('[data-click="selectionSort"]', countingSort)
 
 export function aufgabe29(args) {
+  //lösche alle Sonderzeichen
   const input = args
   const result = []
-
   for (let i = 0; i < input.length; i++) {
-    for (let i = 0; i < input.length; i++) {
-      const currentElement = input[i]
-      const ascii = currentElement.charCodeAt(0)
-
-      if (ascii >= 48 && ascii <= 57) {
-        // wenn ja, ignoriere das Zeichen
-      } else if (ascii >= 65 && ascii <= 90) {
-      } else if (ascii >= 97 && ascii <= 122) {
-      }
-      return result
+    const currentElement = input[i]
+    const ascii = currentElement.charCodeAt(0)
+    if (
+      (ascii >= 32 && ascii <= 47) ||
+      (ascii >= 58 && ascii <= 64) ||
+      (ascii >= 91 && ascii <= 96) ||
+      (ascii >= 123 && ascii <= 126)
+    ) {
+      // überspringe Sonderzeichen und fahre fort
+    } else {
+      result.push(currentElement)
     }
   }
+  return result.join("")
 }
 
-linkupExerciseHandler("[data-click=aufgabe29]", aufgabe29)
+linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
+
+export function aufgabe29(args) {}
+linkupExerciseHandler("[data-click=aufgabe30]", aufgabe30)
