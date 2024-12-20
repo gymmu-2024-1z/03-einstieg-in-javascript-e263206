@@ -346,6 +346,7 @@ export function bubbleSort(args) {
   }
   return liste.join("")
 }
+linkupExerciseHandler("[data-click=bubbleSort]", bubbleSort)
 
 export function aufgabe21(args) {
   const input = args
