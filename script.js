@@ -336,7 +336,7 @@ export function bubbleSort(args) {
     const nextElement = liste[i + 1]
 
     if (currentElement.charCodeAt(0) > nextElement.charCodeAt(0)) {
-      //vertausche die Elemente
+      //vertausche die Elemente (dieser Prozess geht immer weiter bis die Liste nach Grösse geordnet ist)
       liste[i] = nextElement
       liste[i + 1] = currentElement
 
