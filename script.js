@@ -424,7 +424,8 @@ export function aufgabe29(args) {
       } else if (ascii >= 65 && ascii <= 90) {
       } else if (ascii >= 97 && ascii <= 122) {
       }
+      return result
     }
   }
-  return result
 }
+linkupExerciseHandler("[data-click=aufgabe29]", aufgabe29)
