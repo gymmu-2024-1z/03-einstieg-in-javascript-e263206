@@ -328,7 +328,7 @@ export function aufgabe20(args) {
 linkupExerciseHandler("[data-click=aufgabe20]", aufgabe20)
 
 export function bubbleSort(args) {
-  const input = "oiwanalaifansnn>1SHD372521gbga>cqung"
+  const input = args
   const liste = input.split("")
 
   for (let i = 0; i < liste.length - 1; i++) {
