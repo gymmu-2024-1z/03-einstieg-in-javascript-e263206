@@ -385,4 +385,27 @@ export function countingSort(args) {
   return result.join("")
 }
 
-linkupExerciseHandler('[data-click="countingSort"]', "countingSort")
+linkupExerciseHandler('[data-click="countingSort"]', countingSort)
+export function selectionSort(args) {
+  //selection sort
+
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length - 1; i++) {
+    let minIndex = i
+    for (let j = i + 1; j < input.length; j++) {
+      if (input[j] < input[minIndex]) {
+        minIndex = j
+      }
+    }
+    //swap arr[i] and arr[minIndex]
+    const temp = input[i]
+    input[i] = input[minIndex]
+    input[minIndex] = temp
+  }
+
+  return input
+}
+
+linkupExerciseHandler('[data-click="selectionSort"]', selectionSort)
