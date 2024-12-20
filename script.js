@@ -428,4 +428,5 @@ export function aufgabe29(args) {
     }
   }
 }
+
 linkupExerciseHandler("[data-click=aufgabe29]", aufgabe29)
